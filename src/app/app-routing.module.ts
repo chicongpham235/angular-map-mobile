@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MapComponent } from './map/map.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'maps',
+    component: MapComponent,
+  },
+  // Always go on /tasks path
+  { path: '', redirectTo: '/maps', pathMatch: 'full' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
