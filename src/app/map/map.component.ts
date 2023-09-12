@@ -11,6 +11,7 @@ export class MapComponent implements OnInit {
   options: google.maps.MapOptions = {
     maxZoom: 15,
     minZoom: 8,
+    mapTypeControl: false,
   };
   ngOnInit(): void {
     navigator.geolocation.getCurrentPosition((position) => {
